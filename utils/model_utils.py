@@ -59,7 +59,7 @@ def revert_sync_batchnorm(module):
 class TracedModel(nn.Module):
     """
     creates a traced model where every operation done by the model is saved to a graph in Torch-script to
-    be loaded into other backend
+    be loaded into another backend
     """
     def __init__(self, model, device=None, img_size=(640, 640)):
         super(TracedModel, self).__init__()
