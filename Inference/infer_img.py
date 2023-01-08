@@ -13,13 +13,24 @@ class YoloOutputs(dataclasses):
     Class: Union[List[int], Tuple[int]] = None
 
 
-def infer_img(model: Union[model_utils.TracedModel, torch.nn.Module],
+def infer_img(model: Union[model_utils.TracedModel, torch.nn.Module],img:np.array=None,
               path=None, iou_th=0.4,
               score_th=0.25, **kwargs):
-    assert path is None, "can't infer an image that doesn't exist"
-    img, shape = Images_utils.load_img(path, form='CHW', **kwargs)
-    img = torch.from_numpy(img) / 255.0
-    img = img.unsqueeze(0)
+    """
+    model:the yolo model
+    img: rgb image transposed (c,h,w) 
+    iou_th: intersection over union threshold
+    score_th: the bound of the prediction score
+    kwargs: parameters for loading image if path is provided
+    """
+    assert path is None and img is None, "can't infer an image that doesn't exist"
+    if path:   
+      img, shape = Images_utils.load_img(path, form='CHW', **kwargs)
+    elif img:
+        shape= img.shape
+        img = img.transpose(2,0,1)
+     img = torch.from_numpy(img) / 255.0
+     img = img.unsqueeze(0)
     with torch.no_grad():
         pred = model(img)[0]
     pred = dt.NMS(pred, iou_th, score_th)
