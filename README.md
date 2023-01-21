@@ -84,17 +84,10 @@ Lastly, we combined the two sections of the model to get the final classificatio
 
 
 
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
-
-
 ## Demo
 
-Insert gif or link to demo
+- [Link](https://user-images.githubusercontent.com/73429994/213875075-81ae24f1-8c04-4d8b-9a71-7cf85b2b7fee.mp4)
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+https://user-images.githubusercontent.com/73429994/213875075-81ae24f1-8c04-4d8b-9a71-7cf85b2b7fee.mp4
+
+
