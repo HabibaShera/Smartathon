@@ -95,6 +95,5 @@ To deploy this project run
 
 ## Demo
 
-Insert gif or link to demo
+https://user-images.githubusercontent.com/73429994/213873162-95fa6874-8692-42bd-ad16-ba7cca4f23d7.mp4
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
