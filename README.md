@@ -92,8 +92,9 @@ To deploy this project run
   npm run deploy
 ```
 
-
 ## Demo
 
-https://user-images.githubusercontent.com/73429994/213873162-95fa6874-8692-42bd-ad16-ba7cca4f23d7.mp4
+
+https://user-images.githubusercontent.com/73429994/213875075-81ae24f1-8c04-4d8b-9a71-7cf85b2b7fee.mp4
+
 
